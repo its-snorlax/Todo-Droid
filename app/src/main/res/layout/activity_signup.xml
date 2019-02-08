@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+    <EditText
+            android:id="@+id/username_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/username"
+            android:ems="10"
+            android:inputType="text"
+            android:drawableStart="@drawable/username"
+            android:textColor="#FFFF"
+            android:layout_margin="10dp"/>
+
+    <EditText
+            android:ems="10"
+            android:id="@+id/password_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/lock"
+            android:hint="@string/password"
+            android:textColor="@color/white"
+            android:layout_below="@+id/username_signup"/>
+
+    <Button
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password_signup"
+            android:text="@string/signup"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
