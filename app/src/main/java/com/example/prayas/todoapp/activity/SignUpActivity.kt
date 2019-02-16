@@ -1,6 +1,7 @@
 package com.example.prayas.todoapp.activity
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
@@ -49,6 +50,9 @@ class SignUpActivity : AppCompatActivity(), SignupView {
     override fun onSignupSucess() {
         Toast.makeText(this,"Signup done",Toast.LENGTH_LONG).show()
         progressDialog.dismiss()
+        val startLoginActivity = Intent(this, LoginActivity::class.java)
+        startActivity(startLoginActivity)
+        finish()
     }
 
     override fun onSignupFailure() {
