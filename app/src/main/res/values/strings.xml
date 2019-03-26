@@ -4,7 +4,7 @@
     <string name="signup">SIGNUP</string>
     <string name="password">PASSWORD</string>
     <string name="title_activity_login">Sign in</string>
-    <!-- Strings related to login -->
+    <!-- Strings related to createUser -->
     <string name="login_username">USERNAME</string>
     <string name="login_password">PASSWORD</string>
     <string name="action_sign_in">SIGN IN</string>
