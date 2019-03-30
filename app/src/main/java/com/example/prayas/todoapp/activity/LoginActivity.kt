@@ -22,14 +22,13 @@ class LoginActivity : AppCompatActivity(), LoginView {
         SignInButton.setOnClickListener { Signin() }
 
         loginPresenter = object : LoginPresenter(this, ServiceBuilder.build(LoginService::class.java)) {}
-        progressBar = findViewById(R.id.progressbar)
-        progressBar.visibility = View.INVISIBLE
+        progressBar = findViewById(R.id.login_progressbar)
     }
 
     private fun Signin() {
         val username = findViewById<EditText>(R.id.username_signin).text.toString()
         val password = findViewById<EditText>(R.id.password_signin).text.toString()
-        loginPresenter.createUser(username, password)
+        loginPresenter.login(username, password)
     }
 
     override fun onFailure() {

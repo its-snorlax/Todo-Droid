@@ -9,12 +9,12 @@ import retrofit2.Response
 
 open class SignupPresenter(var signupView: SignupView, var signupService: SignupService) {
     fun signup(username: String, password: String) {
-        signupView.showProgressLoader("Signup Progress","Loading")
+        signupView.showProgressBar()
         var currentUser = object : UserInfo(username, password) {}
-        makeRequest(currentUser)
+        doSignupRequest(currentUser)
     }
 
-    private fun makeRequest(currentUser: UserInfo) {
+    private fun doSignupRequest(currentUser: UserInfo) {
         signupService.signup(currentUser).enqueue(object : Callback<Void> {
             override fun onFailure(call: Call<Void>, t: Throwable) {
                 signupView.onSignupFailure()

@@ -6,6 +6,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface LoginService {
-    @POST("/createUser")
+    @POST("/login")
     fun login(@Body currentUser: UserInfo) : Call<Void>
 }
